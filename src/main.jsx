@@ -4,12 +4,17 @@ import './index.css'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Root from "./routes/root.jsx";
 import ErrorPage from "./error-page.jsx";
+import Contact from "./routes/contacts.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root/>,
         errorElement: <ErrorPage/>,
+    },
+    {
+        path: "contacts/:contactId",
+        element: <Contact/>,
     },
 ]);
 
